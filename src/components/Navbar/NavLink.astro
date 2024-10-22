@@ -1,0 +1,15 @@
+---
+interface NavLinkProps {
+  href: string;
+  addClass?: string;
+}
+
+const { href, addClass } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`block py-2 px-3 text-dark-base rounded font-bold md:py-1 md:px-2 lg:p-0 ${addClass}`}
+>
+  <slot />
+</a>
