@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductDetailImages from "../components/ProductDetail/ProductImages/index.astro";
+import ProductDescription from "../components/ProductDetail/ProductDescription/index.astro";
+---
+
+<Layout title="Detail Produk">
+  <main
+    id="detail-product"
+    class="pt-20 w-full flex justify-between flex-col md:flex-row"
+  >
+    <ProductDetailImages />
+    <ProductDescription />
+  </main>
+</Layout>
