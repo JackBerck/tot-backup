@@ -1,0 +1,15 @@
+---
+interface Props {
+  href: string;
+  addClass?: string;
+}
+
+const { href, addClass } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`flex items-center px-3 py-2.5 font-semibold ${addClass}`}
+>
+  <slot />
+</a>
