@@ -13,7 +13,7 @@ export default {
         "dark-base": "#020617",
         "light-base": "#f1f5f9",
         "blue-base": "#1d4ed8",
-        "green-base": "#16a34a",
+        "green-base": "#22c525",
       },
     },
   },

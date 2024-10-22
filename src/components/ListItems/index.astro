@@ -1,0 +1,21 @@
+---
+import FoodsAndDrinks from "./FoodsAndDrinks.astro";
+import Events from "./Events.astro";
+---
+
+<div class="pt-8 pb-8 section-padding-x">
+  <div class="container max-w-screen-xl">
+    <FoodsAndDrinks />
+    <Events />
+  </div>
+</div>
+
+<script>
+  const dropdownButton = document.getElementById("dropdown-button");
+  const dropdown = document.getElementById("dropdown");
+
+  dropdownButton.addEventListener("click", () => {
+    dropdown.classList.toggle("hidden");
+    dropdown.classList.toggle("block");
+  });
+</script>
