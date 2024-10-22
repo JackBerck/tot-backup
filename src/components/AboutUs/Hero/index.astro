@@ -1,0 +1,42 @@
+---
+import achivements from "../../../data/_achievements";
+---
+
+<section
+  class="bg-[url('/images/backgrounds/bakti-sosial-background.jpg')] bg-cover bg-center bg-no-repeat section-padding-x text-light-base pt-32 pb-12 md:pt-48 md:pb-36 relative"
+>
+  <div class="container max-w-screen-lg relative z-20">
+    <div class="text-center">
+      <p class="normal-font-size">Tentang Kami</p>
+      <h1
+        class="mb-4 header-font-size font-extrabold tracking-tight max-w-screen-md mx-auto leading-none"
+      >
+        Kami menghubungkan pemilik makanan berlebih dengan mereka yang
+        membutuhkan
+      </h1>
+      <p class="mb-8 normal-font-size font-normal max-w-screen-sm mx-auto">
+        PeduliRasa membantu mengurangi kelaparan dan pemborosan makanan di
+        Indonesia, sehingga setiap orang dapat berbagi dan mendapatkan manfaat
+        dari makanan yang ada.
+      </p>
+    </div>
+  </div>
+  <div
+    class="w-full h-full bg-gradient-to-b from-dark-base/50 to-transparent absolute z-10 top-0 left-0"
+  >
+  </div>
+  <div
+    class="justify-between items-center gap-4 max-w-screen-sm absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-20 hidden lg:flex"
+  >
+    {
+      achivements.map((achivement) => (
+        <div class="flex flex-col justify-center gap-2 p-4 bg-green-base rounded-lg">
+          <p class="text-sm font-bold card-title-font-size">
+            {achivement.title}
+          </p>
+          <p class="normal-font-size">{achivement.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

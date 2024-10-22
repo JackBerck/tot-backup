@@ -1,0 +1,21 @@
+---
+import achievements from "../../../data/_achievements";
+---
+
+<section
+  id="achievements"
+  class="section-padding-x pt-4 pb-4 md:pt-8 md:pb-8 bg-green-base block lg:hidden"
+>
+  <div class="container max-w-screen-lg">
+    <div class="flex flex-wrap gap-4 md:gap-8 justify-between items-center">
+      {
+        achievements.map((achievement) => (
+          <div class="text-light-base">
+            <p class="font-bold subheader-font-size">{achievement.title}</p>
+            <p class="normal-font-size">{achievement.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
