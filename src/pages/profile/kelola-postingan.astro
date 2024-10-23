@@ -3,9 +3,11 @@ import Layout from "../../layouts/Layout.astro";
 import { events } from "../../data/_items.js";
 import truncateText from "../../utils/truncateText.js";
 import Aside from "../../components/Profile/Aside/index.astro";
+import DeleteModal from "../../components/Modal/DeleteModal.astro";
 ---
 
 <Layout title="Kelola Produk">
+  <DeleteModal />
   <div class="pt-24 pb-8 section-padding-x">
     <div class="container max-w-screen-xl">
       <div class="flex flex-col md:flex-row gap-8">
@@ -23,7 +25,7 @@ import Aside from "../../components/Profile/Aside/index.astro";
                   <div class="absolute top-1 right-1 md:top-2 md:right-2 flex gap-2 items-center z-10">
                     <a
                       href="edit-product"
-                      class="text-light-base bg-blue-base p-3 rounded-full"
+                      class="text-light-base bg-blue-base p-3 rounded-full edit-product"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +36,9 @@ import Aside from "../../components/Profile/Aside/index.astro";
                         <path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
                       </svg>
                     </a>
-                    <a
-                      href="delete-product"
-                      class="text-light-base bg-red-600 p-3 rounded-full"
+                    <button
+                      type="button"
+                      class="cursor-pointer text-light-base bg-red-600 p-3 rounded-full delete-product"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +48,7 @@ import Aside from "../../components/Profile/Aside/index.astro";
                       >
                         <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
                       </svg>
-                    </a>
+                    </button>
                   </div>
                   <a href={`post?id=${index}`}>
                     <img
